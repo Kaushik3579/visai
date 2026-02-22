@@ -1,0 +1,137 @@
+.file-upload-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.file-upload-content {
+  background: #252526;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border: 1px solid #3e3e42;
+}
+
+.upload-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #3e3e42;
+}
+
+.upload-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #cccccc;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.close-btn:hover {
+  background: #3e3e42;
+  color: #ffffff;
+}
+
+.close-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.close-btn:disabled:hover {
+  background: none;
+  color: #cccccc;
+}
+
+.upload-zone {
+  margin: 24px;
+  padding: 60px 40px;
+  border: 2px dashed #3e3e42;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  background: #1e1e1e;
+}
+
+.upload-zone:hover {
+  border-color: #007acc;
+  background: #252526;
+}
+
+.upload-zone.dragging {
+  border-color: #007acc;
+  background: #094771;
+  border-style: solid;
+}
+
+.upload-zone.extracting {
+  border-color: #4caf50;
+  background: #1e1e1e;
+  cursor: default;
+}
+
+.upload-zone.extracting svg {
+  color: #4caf50;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.upload-zone svg {
+  color: #858585;
+  transition: color 0.3s;
+}
+
+.upload-zone:hover svg,
+.upload-zone.dragging svg {
+  color: #007acc;
+}
+
+.upload-text {
+  margin: 0;
+  font-size: 16px;
+  color: #cccccc;
+  text-align: center;
+}
+
+.upload-hint {
+  margin: 0;
+  font-size: 13px;
+  color: #858585;
+  text-align: center;
+}

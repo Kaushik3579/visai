@@ -1,0 +1,125 @@
+.pdf-viewer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #2d2d30;
+}
+
+.pdf-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: #252526;
+  border-bottom: 1px solid #3e3e42;
+  flex-shrink: 0;
+}
+
+.pdf-navigation,
+.pdf-zoom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pdf-controls button {
+  background: #2d2d30;
+  border: 1px solid #3e3e42;
+  color: #cccccc;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+  font-size: 13px;
+}
+
+.pdf-controls button:hover:not(:disabled) {
+  background: #3e3e42;
+  color: #ffffff;
+  border-color: #007acc;
+}
+
+.pdf-controls button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.page-info,
+.zoom-level {
+  font-size: 13px;
+  color: #cccccc;
+  padding: 0 8px;
+  font-variant-numeric: tabular-nums;
+}
+
+.download-btn {
+  background: #0e639c !important;
+  border-color: #0e639c !important;
+  color: #ffffff !important;
+}
+
+.download-btn:hover:not(:disabled) {
+  background: #1177bb !important;
+}
+
+.pdf-content {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: #2d2d30;
+}
+
+.pdf-content::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+.pdf-content::-webkit-scrollbar-thumb {
+  background: #4e4e50;
+  border-radius: 6px;
+}
+
+.pdf-content::-webkit-scrollbar-thumb:hover {
+  background: #5e5e60;
+}
+
+.react-pdf__Document {
+  display: flex;
+  justify-content: center;
+}
+
+.react-pdf__Page {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  background: white;
+}
+
+.react-pdf__Page__canvas {
+  max-width: 100%;
+  height: auto !important;
+}
+
+.pdf-loading,
+.pdf-error {
+  padding: 40px;
+  text-align: center;
+  color: #858585;
+  font-size: 14px;
+}
+
+.pdf-error {
+  color: #f48771;
+}
+
+.react-pdf__Page__textContent {
+  border: none !important;
+}
+
+.react-pdf__Page__annotations {
+  border: none !important;
+}
