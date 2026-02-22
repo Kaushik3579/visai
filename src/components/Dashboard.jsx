@@ -15,13 +15,11 @@ import PDFViewer from './PDFViewer';
 import PDFMetadataViewer from './PDFMetadataViewer';
 import DocumentEditor from './DocumentEditor';
 import CitationManager from './CitationManager';
-import SignInModal from './SignInModal';
 import ProfileDropdown from './ProfileDropdown';
 import { 
   Upload, 
   X, 
   FileText,
-  LogIn
 } from 'lucide-react';
 import '../styles/Dashboard.css';
 
@@ -30,7 +28,6 @@ const Dashboard = () => {
   const { selectedDocument } = useDocuments();
   const { user } = useAuth();
   const [showUpload, setShowUpload] = useState(false);
-  const [showSignIn, setShowSignIn] = useState(false);
   const [activeView, setActiveView] = useState('explorer');
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
@@ -132,18 +129,7 @@ const Dashboard = () => {
             <span>Upload</span>
           </button>
 
-          {!user ? (
-            <button 
-              onClick={() => setShowSignIn(true)}
-              className="header-btn signin-btn"
-              title="Sign In"
-            >
-              <LogIn size={20} />
-              <span>Sign In</span>
-            </button>
-          ) : (
-            <ProfileDropdown />
-          )}
+          <ProfileDropdown />
         </div>
       </header>
 
@@ -186,9 +172,6 @@ const Dashboard = () => {
         <FileUpload onClose={() => setShowUpload(false)} />
       )}
 
-      {showSignIn && (
-        <SignInModal onClose={() => setShowSignIn(false)} />
-      )}
     </div>
   );
 };
