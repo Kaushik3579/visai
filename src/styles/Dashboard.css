@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background: #1e1e1e;
-  color: #cccccc;
+  background: var(--bg);
+  color: var(--text);
 }
 
 .dashboard-header {
@@ -11,8 +11,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
-  background: #252526;
-  border-bottom: 1px solid #3e3e42;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
   z-index: 100;
 }
 
@@ -24,29 +24,29 @@
 
 .user-workspace {
   font-size: 13px;
-  color: #4fc3f7;
+  color: var(--info);
   font-weight: normal;
   padding: 4px 8px;
-  background: #1e1e1e;
+  background: var(--bg);
   border-radius: 3px;
-  border: 1px solid #007acc;
+  border: 1px solid var(--accent);
 }
 
 .directory-path {
   font-size: 13px;
-  color: #858585;
+  color: var(--muted);
   font-weight: normal;
   padding: 4px 8px;
-  background: #1e1e1e;
+  background: var(--bg);
   border-radius: 3px;
-  border: 1px solid #3e3e42;
+  border: 1px solid var(--border);
 }
 
 .dashboard-header h1 {
   font-size: 16px;
   font-weight: 500;
   margin: 0;
-  color: #ffffff;
+  color: var(--text-strong);
 }
 
 .header-actions {
@@ -56,8 +56,8 @@
 
 .header-btn {
   background: none;
-  border: 1px solid #3e3e42;
-  color: #cccccc;
+  border: 1px solid var(--border);
+  color: var(--text);
   cursor: pointer;
   padding: 8px 16px;
   display: flex;
@@ -69,20 +69,20 @@
 }
 
 .header-btn:hover {
-  background: #2a2d2e;
-  color: #ffffff;
-  border-color: #007acc;
+  background: var(--surface-2);
+  color: var(--text-strong);
+  border-color: var(--accent);
 }
 
 .open-folder-btn {
-  background: #007acc;
-  border-color: #007acc;
-  color: #ffffff;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--surface);
 }
 
 .open-folder-btn:hover {
-  background: #005a9e;
-  border-color: #005a9e;
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
 }
 
 .dashboard-body {
@@ -93,8 +93,8 @@
 
 .sidebar-panel {
   width: 320px;
-  background: #252526;
-  border-right: 1px solid #3e3e42;
+  background: var(--surface);
+  border-right: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -109,8 +109,8 @@
 
 .file-tabs {
   display: flex;
-  background: #2d2d30;
-  border-bottom: 1px solid #3e3e42;
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
   overflow-x: auto;
   flex-shrink: 0;
 }
@@ -120,7 +120,7 @@
 }
 
 .file-tabs::-webkit-scrollbar-thumb {
-  background: #4e4e50;
+  background: var(--border-strong);
   border-radius: 2px;
 }
 
@@ -129,8 +129,8 @@
   align-items: center;
   gap: 8px;
   padding: 8px 12px;
-  background: #2d2d30;
-  border-right: 1px solid #3e3e42;
+  background: var(--surface-2);
+  border-right: 1px solid var(--border);
   cursor: pointer;
   white-space: nowrap;
   transition: background 0.2s;
@@ -139,12 +139,12 @@
 }
 
 .file-tab:hover {
-  background: #2a2d2e;
+  background: var(--surface-2);
 }
 
 .file-tab.active {
-  background: #1e1e1e;
-  color: #ffffff;
+  background: var(--bg);
+  color: var(--text-strong);
 }
 
 .tab-name {
@@ -157,7 +157,7 @@
 .tab-close {
   background: none;
   border: none;
-  color: #858585;
+  color: var(--muted);
   cursor: pointer;
   padding: 2px;
   display: flex;
@@ -167,14 +167,14 @@
 }
 
 .tab-close:hover {
-  background: #3e3e42;
-  color: #ffffff;
+  background: var(--border);
+  color: var(--text-strong);
 }
 
 .content-area {
   flex: 1;
   overflow: auto;
-  background: #1e1e1e;
+  background: var(--bg);
 }
 
 .empty-workspace {
@@ -184,7 +184,7 @@
   justify-content: center;
   height: 100%;
   gap: 16px;
-  color: #858585;
+  color: var(--muted);
 }
 
 .empty-workspace svg {
@@ -195,7 +195,7 @@
   margin: 0;
   font-size: 24px;
   font-weight: 400;
-  color: #cccccc;
+  color: var(--text-strong);
 }
 
 .empty-workspace p {
@@ -208,8 +208,8 @@
   align-items: center;
   gap: 8px;
   padding: 10px 20px;
-  background: #0e639c;
-  color: #ffffff;
+  background: var(--accent);
+  color: var(--surface);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -219,7 +219,7 @@
 }
 
 .primary-btn:hover {
-  background: #1177bb;
+  background: var(--accent-strong);
 }
 
 @media (max-width: 1024px) {

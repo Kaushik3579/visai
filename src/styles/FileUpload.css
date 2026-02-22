@@ -13,12 +13,12 @@
 }
 
 .file-upload-content {
-  background: #252526;
+  background: var(--surface);
   border-radius: 8px;
   width: 90%;
   max-width: 500px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-  border: 1px solid #3e3e42;
+  border: 1px solid var(--border);
 }
 
 .upload-header {
@@ -26,20 +26,20 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 24px;
-  border-bottom: 1px solid #3e3e42;
+  border-bottom: 1px solid var(--border);
 }
 
 .upload-header h3 {
   margin: 0;
   font-size: 18px;
   font-weight: 500;
-  color: #ffffff;
+  color: var(--text-strong);
 }
 
 .close-btn {
   background: none;
   border: none;
-  color: #cccccc;
+  color: var(--text);
   cursor: pointer;
   padding: 4px;
   display: flex;
@@ -49,8 +49,8 @@
 }
 
 .close-btn:hover {
-  background: #3e3e42;
-  color: #ffffff;
+  background: var(--border);
+  color: var(--text-strong);
 }
 
 .close-btn:disabled {
@@ -60,13 +60,13 @@
 
 .close-btn:disabled:hover {
   background: none;
-  color: #cccccc;
+  color: var(--text);
 }
 
 .upload-zone {
   margin: 24px;
   padding: 60px 40px;
-  border: 2px dashed #3e3e42;
+  border: 2px dashed var(--border);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -75,28 +75,28 @@
   gap: 16px;
   cursor: pointer;
   transition: all 0.3s;
-  background: #1e1e1e;
+  background: var(--bg);
 }
 
 .upload-zone:hover {
-  border-color: #007acc;
-  background: #252526;
+  border-color: var(--accent);
+  background: var(--surface);
 }
 
 .upload-zone.dragging {
-  border-color: #007acc;
-  background: #094771;
+  border-color: var(--accent);
+  background: var(--accent-soft);
   border-style: solid;
 }
 
 .upload-zone.extracting {
-  border-color: #4caf50;
-  background: #1e1e1e;
+  border-color: var(--success);
+  background: var(--bg);
   cursor: default;
 }
 
 .upload-zone.extracting svg {
-  color: #4caf50;
+  color: var(--success);
 }
 
 .spinner {
@@ -113,25 +113,25 @@
 }
 
 .upload-zone svg {
-  color: #858585;
+  color: var(--muted);
   transition: color 0.3s;
 }
 
 .upload-zone:hover svg,
 .upload-zone.dragging svg {
-  color: #007acc;
+  color: var(--accent);
 }
 
 .upload-text {
   margin: 0;
   font-size: 16px;
-  color: #cccccc;
+  color: var(--text);
   text-align: center;
 }
 
 .upload-hint {
   margin: 0;
   font-size: 13px;
-  color: #858585;
+  color: var(--muted);
   text-align: center;
 }

@@ -11,7 +11,7 @@
   flex: 1;
   min-height: 40%;
   overflow: hidden;
-  border-bottom: 2px solid #1e1e1e;
+  border-bottom: 2px solid var(--bg);
 }
 
 .explorer-header {
@@ -19,7 +19,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px 16px;
-  border-bottom: 1px solid #3e3e42;
+  border-bottom: 1px solid var(--border);
 }
 
 .explorer-header h3 {
@@ -28,7 +28,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: #cccccc;
+  color: var(--text);
 }
 
 .header-actions {
@@ -39,7 +39,7 @@
 .icon-btn {
   background: none;
   border: none;
-  color: #cccccc;
+  color: var(--text);
   cursor: pointer;
   padding: 4px;
   display: flex;
@@ -49,22 +49,22 @@
 }
 
 .icon-btn:hover {
-  background: #2a2d2e;
-  color: #ffffff;
+  background: var(--surface-2);
+  color: var(--text-strong);
 }
 
 .new-folder-input {
   padding: 4px 16px;
-  background: #2d2d30;
+  background: var(--surface-2);
 }
 
 .new-folder-input input {
   width: 100%;
   padding: 6px 8px;
-  background: #3c3c3c;
-  border: 1px solid #007acc;
+  background: var(--surface-3);
+  border: 1px solid var(--accent);
   border-radius: 2px;
-  color: #cccccc;
+  color: var(--text);
   font-size: 13px;
   outline: none;
 }
@@ -80,12 +80,12 @@
 }
 
 .file-tree::-webkit-scrollbar-thumb {
-  background: #4e4e50;
+  background: var(--border-strong);
   border-radius: 4px;
 }
 
 .file-tree::-webkit-scrollbar-thumb:hover {
-  background: #5e5e60;
+  background: var(--border-strong);
 }
 
 .file-node {
@@ -109,7 +109,7 @@
 }
 
 .file-node-content:hover {
-  background: #2a2d2e;
+  background: var(--surface-2);
 }
 
 .file-node-content:hover .file-actions {
@@ -117,32 +117,32 @@
 }
 
 .file-node-content.selected {
-  background: #094771;
-  color: #ffffff;
+  background: var(--accent-soft);
+  color: var(--text-strong);
 }
 
 .file-node-content.drop-target {
-  background: #2a4d6e;
-  border: 1px dashed #007acc;
+  background: var(--accent-soft);
+  border: 1px dashed var(--accent);
 }
 
 .chevron {
   display: flex;
   align-items: center;
-  color: #cccccc;
+  color: var(--text);
   flex-shrink: 0;
 }
 
 .file-icon {
   display: flex;
   align-items: center;
-  color: #cccccc;
+  color: var(--text);
   flex-shrink: 0;
 }
 
 .file-node-content.selected .file-icon,
 .file-node-content.selected .chevron {
-  color: #ffffff;
+  color: var(--text-strong);
 }
 
 .file-name {
@@ -151,21 +151,21 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: #cccccc;
+  color: var(--text);
 }
 
 .file-node-content.selected .file-name {
-  color: #ffffff;
+  color: var(--text-strong);
   font-weight: 500;
 }
 
 .rename-input {
   flex: 1;
   padding: 2px 4px;
-  background: #3c3c3c;
-  border: 1px solid #007acc;
+  background: var(--surface-3);
+  border: 1px solid var(--accent);
   border-radius: 2px;
-  color: #cccccc;
+  color: var(--text);
   font-size: 13px;
   outline: none;
 }
@@ -181,7 +181,7 @@
 .action-btn {
   background: none;
   border: none;
-  color: #cccccc;
+  color: var(--text);
   cursor: pointer;
   padding: 3px;
   display: flex;
@@ -191,13 +191,13 @@
 }
 
 .action-btn:hover {
-  background: #3e3e42;
-  color: #ffffff;
+  background: var(--border);
+  color: var(--text-strong);
 }
 
 .action-btn.delete:hover {
-  background: #c72e0f;
-  color: #ffffff;
+  background: var(--danger);
+  color: var(--surface);
 }
 
 .folder-children {

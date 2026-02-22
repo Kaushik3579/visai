@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: #2d2d30;
+  background: var(--surface-2);
 }
 
 .pdf-controls {
@@ -10,8 +10,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
-  background: #252526;
-  border-bottom: 1px solid #3e3e42;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
   flex-shrink: 0;
 }
 
@@ -23,9 +23,9 @@
 }
 
 .pdf-controls button {
-  background: #2d2d30;
-  border: 1px solid #3e3e42;
-  color: #cccccc;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text);
   padding: 6px 12px;
   border-radius: 4px;
   cursor: pointer;
@@ -37,9 +37,9 @@
 }
 
 .pdf-controls button:hover:not(:disabled) {
-  background: #3e3e42;
-  color: #ffffff;
-  border-color: #007acc;
+  background: var(--border);
+  color: var(--text-strong);
+  border-color: var(--accent);
 }
 
 .pdf-controls button:disabled {
@@ -50,19 +50,19 @@
 .page-info,
 .zoom-level {
   font-size: 13px;
-  color: #cccccc;
+  color: var(--text);
   padding: 0 8px;
   font-variant-numeric: tabular-nums;
 }
 
 .download-btn {
-  background: #0e639c !important;
-  border-color: #0e639c !important;
-  color: #ffffff !important;
+  background: var(--accent-strong) !important;
+  border-color: var(--accent-strong) !important;
+  color: var(--surface) !important;
 }
 
 .download-btn:hover:not(:disabled) {
-  background: #1177bb !important;
+  background: var(--accent-strong) !important;
 }
 
 .pdf-content {
@@ -71,7 +71,7 @@
   display: flex;
   justify-content: center;
   padding: 20px;
-  background: #2d2d30;
+  background: var(--surface-2);
 }
 
 .pdf-content::-webkit-scrollbar {
@@ -80,12 +80,12 @@
 }
 
 .pdf-content::-webkit-scrollbar-thumb {
-  background: #4e4e50;
+  background: var(--border-strong);
   border-radius: 6px;
 }
 
 .pdf-content::-webkit-scrollbar-thumb:hover {
-  background: #5e5e60;
+  background: var(--border-strong);
 }
 
 .react-pdf__Document {
@@ -94,9 +94,9 @@
 }
 
 .react-pdf__Page {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow);
   margin-bottom: 20px;
-  background: white;
+  background: var(--surface);
 }
 
 .react-pdf__Page__canvas {
@@ -108,12 +108,12 @@
 .pdf-error {
   padding: 40px;
   text-align: center;
-  color: #858585;
+  color: var(--muted);
   font-size: 14px;
 }
 
 .pdf-error {
-  color: #f48771;
+  color: var(--warning);
 }
 
 .react-pdf__Page__textContent {

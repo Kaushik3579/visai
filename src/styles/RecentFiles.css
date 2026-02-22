@@ -3,7 +3,7 @@
   flex-direction: column;
   height: 100%;
   overflow: hidden;
-  background: #252526;
+  background: var(--surface);
 }
 
 .recent-header {
@@ -11,7 +11,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px 16px;
-  border-bottom: 1px solid #3e3e42;
+  border-bottom: 1px solid var(--border);
 }
 
 .recent-header .header-title {
@@ -26,13 +26,13 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: #cccccc;
+  color: var(--text);
 }
 
 .clear-btn {
   background: none;
   border: none;
-  color: #858585;
+  color: var(--muted);
   cursor: pointer;
   padding: 4px 8px;
   display: flex;
@@ -43,8 +43,8 @@
 }
 
 .clear-btn:hover {
-  background: #c72e0f;
-  color: #ffffff;
+  background: var(--danger);
+  color: var(--surface);
 }
 
 .recent-content {
@@ -59,7 +59,7 @@
   justify-content: center;
   height: 100%;
   gap: 12px;
-  color: #858585;
+  color: var(--muted);
   padding: 40px 20px;
   text-align: center;
 }
@@ -87,7 +87,7 @@
   align-items: center;
   gap: 10px;
   padding: 10px 12px;
-  background: #2d2d30;
+  background: var(--surface-2);
   border-radius: 4px;
   margin-bottom: 8px;
   cursor: pointer;
@@ -96,23 +96,23 @@
 }
 
 .recent-item:hover {
-  background: #2a2d2e;
+  background: var(--surface-2);
   transform: translateX(2px);
 }
 
 .recent-item-icon {
   display: flex;
   align-items: center;
-  color: #858585;
+  color: var(--muted);
   flex-shrink: 0;
 }
 
 .file-icon-pdf {
-  color: #f48771;
+  color: var(--warning);
 }
 
 .file-icon-default {
-  color: #858585;
+  color: var(--muted);
 }
 
 .recent-item-info {
@@ -122,7 +122,7 @@
 
 .recent-item-name {
   font-size: 13px;
-  color: #cccccc;
+  color: var(--text);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -134,17 +134,17 @@
   align-items: center;
   gap: 6px;
   font-size: 11px;
-  color: #858585;
+  color: var(--muted);
 }
 
 .meta-separator {
-  color: #3e3e42;
+  color: var(--border);
 }
 
 .remove-btn {
   background: none;
   border: none;
-  color: #858585;
+  color: var(--muted);
   cursor: pointer;
   padding: 4px;
   display: flex;
@@ -160,6 +160,6 @@
 }
 
 .remove-btn:hover {
-  background: #c72e0f;
-  color: #ffffff;
+  background: var(--danger);
+  color: var(--surface);
 }

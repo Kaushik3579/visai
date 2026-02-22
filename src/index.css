@@ -1,18 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
 :root {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  line-height: 1.5;
+  font-family: 'Instrument Sans', 'Segoe UI', system-ui, sans-serif;
+  line-height: 1.6;
   font-weight: 400;
 
-  color-scheme: dark;
-  color: #cccccc;
-  background-color: #1e1e1e;
+  color-scheme: light;
+  color: var(--text);
+  background-color: var(--bg);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --bg: #f6f4f0;
+  --surface: #ffffff;
+  --surface-2: #f1ede6;
+  --surface-3: #eae5dc;
+  --border: #ded7cd;
+  --border-strong: #cfc7bc;
+  --text: #1f1e1a;
+  --text-strong: #14130f;
+  --muted: #6f6a60;
+  --muted-strong: #585349;
+  --accent: #2f6f5e;
+  --accent-strong: #255a4b;
+  --accent-soft: #e2efe9;
+  --success: #2f6f5e;
+  --success-strong: #225948;
+  --danger: #b2472f;
+  --warning: #c27a4c;
+  --info: #3a7f8f;
+  --shadow: 0 12px 30px rgba(30, 27, 21, 0.08);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
 }
 
 * {
@@ -26,8 +49,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow: hidden;
-  background-color: #1e1e1e;
-  color: #cccccc;
+  background-color: var(--bg);
+  color: var(--text);
 }
 
 button {
@@ -45,15 +68,14 @@ input, select, textarea {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1e1e1e;
+  background: var(--surface-2);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4e4e50;
-  border-radius: 5px;
+  background: var(--border-strong);
+  border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #5e5e60;
+  background: var(--muted-strong);
 }
-

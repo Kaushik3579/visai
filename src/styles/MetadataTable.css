@@ -3,7 +3,7 @@
   flex-direction: column;
   height: 100%;
   overflow: hidden;
-  background: #252526;
+  background: var(--surface);
 }
 
 .metadata-header {
@@ -11,8 +11,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px 24px;
-  border-bottom: 1px solid #3e3e42;
-  background: #2d2d30;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface-2);
 }
 
 .metadata-header .header-title {
@@ -26,17 +26,17 @@
   font-size: 18px;
   font-weight: 600;
   letter-spacing: 0.3px;
-  color: #ffffff;
+  color: var(--text-strong);
 }
 
 /* Controls Section */
 .metadata-controls {
   padding: 16px 24px;
-  border-bottom: 1px solid #3e3e42;
+  border-bottom: 1px solid var(--border);
   display: flex;
   flex-direction: column;
   gap: 12px;
-  background: #1e1e1e;
+  background: var(--bg);
 }
 
 .search-box {
@@ -48,29 +48,29 @@
 .search-icon {
   position: absolute;
   left: 10px;
-  color: #858585;
+  color: var(--muted);
   pointer-events: none;
 }
 
 .search-input {
   width: 100%;
   padding: 8px 32px 8px 36px;
-  background: #3c3c3c;
-  border: 1px solid #3e3e42;
+  background: var(--surface-3);
+  border: 1px solid var(--border);
   border-radius: 4px;
-  color: #cccccc;
+  color: var(--text);
   font-size: 13px;
   outline: none;
   transition: all 0.2s;
 }
 
 .search-input:focus {
-  border-color: #007acc;
-  background: #2d2d30;
+  border-color: var(--accent);
+  background: var(--surface-2);
 }
 
 .search-input::placeholder {
-  color: #858585;
+  color: var(--muted);
 }
 
 .clear-search {
@@ -78,7 +78,7 @@
   right: 8px;
   background: none;
   border: none;
-  color: #858585;
+  color: var(--muted);
   cursor: pointer;
   padding: 4px;
   display: flex;
@@ -88,8 +88,8 @@
 }
 
 .clear-search:hover {
-  background: #3e3e42;
-  color: #cccccc;
+  background: var(--border);
+  color: var(--text);
 }
 
 /* Filter Buttons */
@@ -100,10 +100,10 @@
 
 .filter-btn {
   padding: 6px 12px;
-  background: #2d2d30;
-  border: 1px solid #3e3e42;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
   border-radius: 4px;
-  color: #cccccc;
+  color: var(--text);
   font-size: 12px;
   cursor: pointer;
   transition: all 0.2s;
@@ -111,14 +111,14 @@
 }
 
 .filter-btn:hover {
-  background: #3c3c3c;
-  border-color: #007acc;
+  background: var(--surface-3);
+  border-color: var(--accent);
 }
 
 .filter-btn.active {
-  background: #007acc;
-  border-color: #007acc;
-  color: #ffffff;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--surface);
 }
 
 /* Content Area */
@@ -134,7 +134,7 @@
   justify-content: center;
   height: 100%;
   gap: 12px;
-  color: #858585;
+  color: var(--muted);
   padding: 40px 20px;
   text-align: center;
 }
@@ -169,7 +169,7 @@
 .metadata-table thead {
   position: sticky;
   top: 0;
-  background: #2d2d30;
+  background: var(--surface-2);
   z-index: 10;
 }
 
@@ -177,8 +177,8 @@
   text-align: left;
   padding: 10px 12px;
   font-weight: 600;
-  color: #cccccc;
-  border-bottom: 2px solid #3e3e42;
+  color: var(--text);
+  border-bottom: 2px solid var(--border);
   text-transform: uppercase;
   font-size: 11px;
   letter-spacing: 0.5px;
@@ -190,12 +190,12 @@
 }
 
 .metadata-table tbody tr:hover {
-  background: #2a2d2e;
+  background: var(--surface-2);
 }
 
 .metadata-table td {
   padding: 12px;
-  border-bottom: 1px solid #3e3e42;
+  border-bottom: 1px solid var(--border);
   vertical-align: middle;
 }
 
@@ -212,11 +212,11 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  color: #f48771;
+  color: var(--warning);
 }
 
 .file-name-text {
-  color: #cccccc;
+  color: var(--text);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -224,7 +224,7 @@
 
 /* Metadata Cell */
 .metadata-cell {
-  color: #cccccc;
+  color: var(--text);
   max-width: 250px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -234,11 +234,11 @@
 .doi-cell {
   font-family: 'Consolas', 'Monaco', monospace;
   font-size: 12px;
-  color: #4fc3f7;
+  color: var(--info);
 }
 
 .empty-data {
-  color: #858585;
+  color: var(--muted);
   font-style: italic;
 }
 
@@ -250,9 +250,9 @@
 }
 
 .action-btn {
-  background: #3c3c3c;
-  border: 1px solid #3e3e42;
-  color: #cccccc;
+  background: var(--surface-3);
+  border: 1px solid var(--border);
+  color: var(--text);
   cursor: pointer;
   padding: 6px;
   display: flex;
@@ -263,64 +263,64 @@
 }
 
 .action-btn:hover {
-  background: #007acc;
-  border-color: #007acc;
-  color: #ffffff;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--surface);
 }
 
 .edit-btn:hover {
-  background: #0e639c;
-  border-color: #0e639c;
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
 }
 
 .view-btn:hover {
-  background: #16825d;
-  border-color: #16825d;
+  background: var(--success);
+  border-color: var(--success);
 }
 
 .save-btn {
-  background: #16825d;
-  border-color: #16825d;
-  color: #ffffff;
+  background: var(--success);
+  border-color: var(--success);
+  color: var(--surface);
 }
 
 .save-btn:hover {
-  background: #1a9e70;
-  border-color: #1a9e70;
+  background: var(--success-strong);
+  border-color: var(--success-strong);
 }
 
 .cancel-btn:hover {
-  background: #c72e0f;
-  border-color: #c72e0f;
+  background: var(--danger);
+  border-color: var(--danger);
 }
 
 /* Editing Row */
 .editing-row {
-  background: #2a2d2e;
+  background: var(--surface-2);
 }
 
 .edit-input {
   width: 100%;
   padding: 6px 8px;
-  background: #1e1e1e;
-  border: 1px solid #007acc;
+  background: var(--bg);
+  border: 1px solid var(--accent);
   border-radius: 3px;
-  color: #cccccc;
+  color: var(--text);
   font-size: 13px;
   outline: none;
   font-family: inherit;
 }
 
 .edit-input:focus {
-  border-color: #1177bb;
-  background: #252526;
+  border-color: var(--accent-strong);
+  background: var(--surface);
 }
 
 /* Footer */
 .metadata-footer {
   padding: 12px 24px;
-  border-top: 1px solid #3e3e42;
-  background: #2d2d30;
+  border-top: 1px solid var(--border);
+  background: var(--surface-2);
 }
 
 .footer-stats {
@@ -328,7 +328,7 @@
   align-items: center;
   gap: 8px;
   font-size: 12px;
-  color: #858585;
+  color: var(--muted);
 }
 
 .stat-item {
@@ -338,12 +338,12 @@
 }
 
 .stat-value {
-  color: #cccccc;
+  color: var(--text);
   font-weight: 600;
 }
 
 .stat-separator {
-  color: #3e3e42;
+  color: var(--border);
 }
 
 /* Scrollbar Styling */
@@ -355,18 +355,18 @@
 
 .metadata-content::-webkit-scrollbar-track,
 .table-container::-webkit-scrollbar-track {
-  background: #1e1e1e;
+  background: var(--bg);
 }
 
 .metadata-content::-webkit-scrollbar-thumb,
 .table-container::-webkit-scrollbar-thumb {
-  background: #3e3e42;
+  background: var(--border);
   border-radius: 4px;
 }
 
 .metadata-content::-webkit-scrollbar-thumb:hover,
 .table-container::-webkit-scrollbar-thumb:hover {
-  background: #4e4e52;
+  background: var(--border-strong);
 }
 
 /* Responsive Design */

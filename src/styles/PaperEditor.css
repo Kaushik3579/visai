@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: #1e1e1e;
+  background: var(--bg);
 }
 
 .editor-toolbar {
@@ -10,8 +10,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background: #252526;
-  border-bottom: 1px solid #3e3e42;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
   flex-shrink: 0;
 }
 
@@ -23,13 +23,13 @@
 
 .file-name {
   font-size: 13px;
-  color: #cccccc;
+  color: var(--text);
   font-weight: 500;
 }
 
 .unsaved-indicator {
   font-size: 12px;
-  color: #f48771;
+  color: var(--warning);
   font-style: italic;
 }
 
@@ -41,7 +41,7 @@
 
 .word-count {
   font-size: 12px;
-  color: #858585;
+  color: var(--muted);
   font-variant-numeric: tabular-nums;
 }
 
@@ -50,9 +50,9 @@
   align-items: center;
   gap: 6px;
   padding: 6px 12px;
-  background: #2d2d30;
-  border: 1px solid #3e3e42;
-  color: #858585;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--muted);
   border-radius: 4px;
   cursor: pointer;
   font-size: 13px;
@@ -60,20 +60,20 @@
 }
 
 .save-btn:hover:not(:disabled) {
-  background: #3e3e42;
-  color: #cccccc;
-  border-color: #007acc;
+  background: var(--border);
+  color: var(--text);
+  border-color: var(--accent);
 }
 
 .save-btn.has-changes {
-  background: #0e639c;
-  border-color: #0e639c;
-  color: #ffffff;
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
+  color: var(--surface);
 }
 
 .save-btn.has-changes:hover {
-  background: #1177bb;
-  border-color: #1177bb;
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
 }
 
 .save-btn:disabled {
@@ -93,7 +93,7 @@
   justify-content: center;
   height: 100%;
   gap: 16px;
-  color: #858585;
+  color: var(--muted);
 }
 
 .editor-empty svg {

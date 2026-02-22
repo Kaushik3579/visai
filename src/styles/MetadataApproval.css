@@ -13,7 +13,7 @@
 }
 
 .metadata-approval-modal {
-  background: #1e1e1e;
+  background: var(--bg);
   border-radius: 12px;
   width: 90%;
   max-width: 700px;
@@ -44,17 +44,17 @@
   margin: 0;
   font-size: 20px;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-strong);
 }
 
 .metadata-icon-success {
-  color: #4caf50;
+  color: var(--success);
 }
 
 .metadata-close-btn {
   background: none;
   border: none;
-  color: #999;
+  color: var(--muted);
   cursor: pointer;
   padding: 4px;
   display: flex;
@@ -65,8 +65,8 @@
 }
 
 .metadata-close-btn:hover {
-  background: #333;
-  color: #fff;
+  background: var(--surface-3);
+  color: var(--text-strong);
 }
 
 .metadata-approval-body {
@@ -104,18 +104,18 @@
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
-  background: #333;
-  border: 1px solid #444;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
   border-radius: 6px;
-  color: #fff;
+  color: var(--text);
   cursor: pointer;
   font-size: 14px;
   transition: all 0.2s;
 }
 
 .metadata-edit-toggle-btn:hover {
-  background: #3a3a3a;
-  border-color: #555;
+  background: var(--surface-3);
+  border-color: var(--border-strong);
 }
 
 .metadata-fields {
@@ -133,17 +133,17 @@
 .metadata-label {
   font-size: 13px;
   font-weight: 600;
-  color: #999;
+  color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .metadata-value {
   padding: 10px 12px;
-  background: #2a2a2a;
-  border: 1px solid #333;
+  background: var(--bg);
+  border: 1px solid var(--border);
   border-radius: 6px;
-  color: #fff;
+  color: var(--text);
   font-size: 14px;
   line-height: 1.5;
   min-height: 40px;
@@ -151,10 +151,10 @@
 
 .metadata-input {
   padding: 10px 12px;
-  background: #252525;
-  border: 1px solid #444;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 6px;
-  color: #fff;
+  color: var(--text);
   font-size: 14px;
   font-family: inherit;
   transition: all 0.2s;
@@ -162,19 +162,19 @@
 
 .metadata-input:focus {
   outline: none;
-  border-color: #2196f3;
-  background: #2a2a2a;
+  border-color: var(--accent);
+  background: var(--surface);
 }
 
 .metadata-warning {
   display: flex;
   gap: 12px;
   padding: 16px;
-  background: rgba(255, 152, 0, 0.1);
-  border: 1px solid rgba(255, 152, 0, 0.3);
+  background: rgba(194, 122, 76, 0.12);
+  border: 1px solid rgba(194, 122, 76, 0.3);
   border-radius: 8px;
   margin-top: 24px;
-  color: #ffb74d;
+  color: var(--warning);
   font-size: 13px;
   line-height: 1.6;
 }
@@ -192,8 +192,8 @@
   display: flex;
   gap: 12px;
   padding: 20px 24px;
-  border-top: 1px solid #333;
-  background: #252525;
+  border-top: 1px solid var(--border);
+  background: var(--surface-2);
   border-radius: 0 0 12px 12px;
 }
 
@@ -213,25 +213,25 @@
 }
 
 .metadata-btn-reject {
-  background: #333;
-  color: #fff;
-  border: 1px solid #444;
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
 }
 
 .metadata-btn-reject:hover {
-  background: #3a3a3a;
-  border-color: #555;
+  background: var(--surface-3);
+  border-color: var(--border-strong);
 }
 
 .metadata-btn-approve {
-  background: #4caf50;
-  color: #fff;
+  background: var(--success);
+  color: var(--surface);
 }
 
 .metadata-btn-approve:hover {
-  background: #45a049;
+  background: var(--success-strong);
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+  box-shadow: 0 4px 12px rgba(47, 111, 94, 0.25);
 }
 
 /* Scrollbar styling */
@@ -240,14 +240,121 @@
 }
 
 .metadata-approval-body::-webkit-scrollbar-track {
-  background: #1e1e1e;
+  background: var(--bg);
 }
 
 .metadata-approval-body::-webkit-scrollbar-thumb {
-  background: #444;
+  background: var(--border);
   border-radius: 4px;
 }
 
 .metadata-approval-body::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: var(--border-strong);
+}
+
+/* Light theme overrides */
+.metadata-approval-modal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.metadata-approval-header {
+  background: var(--surface-2);
+  border-bottom: 1px solid var(--border);
+}
+
+.metadata-header-content h2 {
+  color: var(--text-strong);
+}
+
+.metadata-close-btn {
+  color: var(--muted);
+}
+
+.metadata-close-btn:hover {
+  background: var(--surface-3);
+  color: var(--text-strong);
+}
+
+.metadata-file-info {
+  background: var(--surface-2);
+  color: var(--muted);
+  border-left-color: var(--info);
+}
+
+.metadata-file-info svg {
+  color: var(--info);
+}
+
+.metadata-edit-toggle-btn {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.metadata-edit-toggle-btn:hover {
+  background: var(--surface-3);
+  border-color: var(--border-strong);
+}
+
+.metadata-label {
+  color: var(--muted);
+}
+
+.metadata-value {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.metadata-input {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.metadata-input:focus {
+  border-color: var(--accent);
+  background: var(--surface);
+}
+
+.metadata-warning {
+  background: rgba(194, 122, 76, 0.12);
+  border: 1px solid rgba(194, 122, 76, 0.3);
+  color: var(--warning);
+}
+
+.metadata-approval-footer {
+  background: var(--surface-2);
+  border-top: 1px solid var(--border);
+}
+
+.metadata-btn-reject {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.metadata-btn-reject:hover {
+  background: var(--surface-3);
+  border-color: var(--border-strong);
+}
+
+.metadata-btn-approve {
+  background: var(--success);
+  color: var(--surface);
+}
+
+.metadata-btn-approve:hover {
+  background: var(--success-strong);
+  box-shadow: 0 4px 12px rgba(47, 111, 94, 0.25);
+}
+
+.metadata-approval-body::-webkit-scrollbar-thumb {
+  background: var(--border);
+}
+
+.metadata-approval-body::-webkit-scrollbar-thumb:hover {
+  background: var(--border-strong);
 }

@@ -2,15 +2,15 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: #252526;
+  background: var(--surface);
   overflow-y: auto;
 }
 
 .metadata-header {
-  background: #2d2d30;
-  color: #ffffff;
+  background: var(--surface-2);
+  color: var(--text-strong);
   padding: 32px;
-  border-bottom: 2px solid #3e3e42;
+  border-bottom: 2px solid var(--border);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -62,27 +62,27 @@
 }
 
 .edit-btn {
-  background: #3c3c3c;
-  color: #ffffff;
-  border: 1px solid #3e3e42;
+  background: var(--surface-3);
+  color: var(--text);
+  border: 1px solid var(--border);
 }
 
 .edit-btn:hover {
-  background: #007acc;
-  border-color: #007acc;
+  background: var(--accent);
+  border-color: var(--accent);
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(0, 122, 204, 0.3);
 }
 
 .save-btn {
-  background: #16825d;
-  color: #ffffff;
-  border: 1px solid #16825d;
+  background: var(--success);
+  color: var(--surface);
+  border: 1px solid var(--success);
 }
 
 .save-btn:hover:not(:disabled) {
-  background: #1a9e70;
-  border-color: #1a9e70;
+  background: var(--success-strong);
+  border-color: var(--success-strong);
   transform: translateY(-1px);
   box-shadow: 0 4px 8px rgba(22, 130, 93, 0.4);
 }
@@ -93,15 +93,15 @@
 }
 
 .cancel-btn {
-  background: #3c3c3c;
-  color: #cccccc;
-  border: 1px solid #3e3e42;
+  background: var(--surface-3);
+  color: var(--text);
+  border: 1px solid var(--border);
 }
 
 .cancel-btn:hover:not(:disabled) {
-  background: #c72e0f;
-  border-color: #c72e0f;
-  color: #ffffff;
+  background: var(--danger);
+  border-color: var(--danger);
+  color: var(--surface);
   box-shadow: 0 4px 8px rgba(199, 46, 15, 0.3);
 }
 
@@ -131,45 +131,45 @@
   margin: 0 0 20px 0;
   font-size: 20px;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--text-strong);
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
 .metadata-table {
-  background: #1e1e1e;
-  border: 1px solid #3e3e42;
+  background: var(--bg);
+  border: 1px solid var(--border);
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: var(--shadow);
 }
 
 .metadata-input {
   width: 100%;
   padding: 8px 12px;
-  border: 1px solid #3e3e42;
+  border: 1px solid var(--border);
   border-radius: 6px;
   font-size: 14px;
   font-family: inherit;
   transition: all 0.2s;
-  background: #1e1e1e;
-  color: #cccccc;
+  background: var(--bg);
+  color: var(--text);
 }
 
 .metadata-input:focus {
   outline: none;
-  border-color: #007acc;
-  background: #252526;
-  box-shadow: 0 0 0 2px rgba(0, 122, 204, 0.2);
+  border-color: var(--accent);
+  background: var(--surface);
+  box-shadow: 0 0 0 2px rgba(47, 111, 94, 0.2);
 }
 
 .metadata-input::placeholder {
-  color: #858585;
+  color: var(--muted);
 }
 
 .doi-link {
-  color: #4fc3f7;
+  color: var(--info);
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -178,7 +178,7 @@
 }
 
 .doi-link:hover {
-  color: #81d4fa;
+  color: var(--accent);
   text-decoration: underline;
 }
 
@@ -188,9 +188,9 @@
 }
 
 .copy-btn {
-  background: #3c3c3c;
-  border: 1px solid #3e3e42;
-  color: #cccccc;
+  background: var(--surface-3);
+  border: 1px solid var(--border);
+  color: var(--text);
   cursor: pointer;
   padding: 8px;
   border-radius: 4px;
@@ -201,15 +201,15 @@
 }
 
 .copy-btn:hover {
-  background: #007acc;
-  border-color: #007acc;
-  color: #ffffff;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--surface);
   transform: translateY(-1px);
-  box-shadow: 0 2px 4px rgba(0, 122, 204, 0.3);
+  box-shadow: 0 2px 4px rgba(47, 111, 94, 0.25);
 }
 
 .copy-btn svg.copied {
-  color: #16825d;
+  color: var(--success);
 }
 
 .metadata-table table {
@@ -218,15 +218,15 @@
 }
 
 .metadata-table thead {
-  background: #2d2d30;
-  border-bottom: 2px solid #3e3e42;
+  background: var(--surface-2);
+  border-bottom: 2px solid var(--border);
 }
 
 .metadata-table th {
   padding: 16px;
   text-align: left;
   font-weight: 600;
-  color: #cccccc;
+  color: var(--text);
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.8px;
@@ -238,16 +238,16 @@
 }
 
 .metadata-table tbody {
-  background: #252526;
+  background: var(--surface);
 }
 
 .metadata-table tbody tr {
-  border-bottom: 1px solid #3e3e42;
+  border-bottom: 1px solid var(--border);
   transition: background 0.2s;
 }
 
 .metadata-table tbody tr:hover {
-  background: #2a2d2e;
+  background: var(--surface-2);
 }
 
 .metadata-table tbody tr:last-child {
@@ -264,27 +264,27 @@
   align-items: center;
   gap: 8px;
   font-weight: 600;
-  color: #cccccc;
+  color: var(--text);
   width: 150px;
 }
 
 .field-label svg {
-  color: #007acc;
+  color: var(--accent);
   flex-shrink: 0;
 }
 
 .field-value {
-  color: #cccccc;
+  color: var(--text);
   word-break: break-word;
 }
 
 .field-value .not-available {
-  color: #858585;
+  color: var(--muted);
   font-style: italic;
 }
 
 .doi-link {
-  color: #4fc3f7;
+  color: var(--info);
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -303,9 +303,9 @@
 }
 
 .copy-btn {
-  background: #3c3c3c;
-  border: 1px solid #3e3e42;
-  color: #cccccc;
+  background: var(--surface-3);
+  border: 1px solid var(--border);
+  color: var(--text);
   cursor: pointer;
   padding: 8px;
   border-radius: 4px;
@@ -316,29 +316,29 @@
 }
 
 .copy-btn:hover {
-  background: #007acc;
-  border-color: #007acc;
-  color: #ffffff;
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--surface);
   transform: translateY(-1px);
-  box-shadow: 0 2px 4px rgba(0, 122, 204, 0.3);
+  box-shadow: 0 2px 4px rgba(47, 111, 94, 0.25);
 }
 
 .copy-btn svg.copied {
-  color: #16825d;
+  color: var(--success);
 }
 
 .citation-section {
   margin-top: 40px;
   padding: 32px;
-  background: #1e1e1e;
+  background: var(--bg);
   border-radius: 12px;
-  border: 1px solid #3e3e42;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
 .citation-header-section {
   margin-bottom: 24px;
-  border-bottom: 1px solid #3e3e42;
+  border-bottom: 1px solid var(--border);
   padding-bottom: 16px;
 }
 
@@ -346,7 +346,7 @@
   margin: 0 0 8px 0;
   font-size: 22px;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text-strong);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -355,7 +355,7 @@
 .citation-description {
   margin: 0;
   font-size: 14px;
-  color: #858585;
+  color: var(--muted);
 }
 
 .citation-style-buttons {
@@ -367,10 +367,10 @@
 
 .style-btn {
   padding: 10px 24px;
-  background: #2d2d30;
-  border: 1px solid #3e3e42;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
   border-radius: 6px;
-  color: #cccccc;
+  color: var(--text);
   font-weight: 600;
   font-size: 13px;
   cursor: pointer;
@@ -380,23 +380,23 @@
 }
 
 .style-btn:hover {
-  border-color: #007acc;
-  color: #ffffff;
-  background: #2a2d2e;
+  border-color: var(--accent);
+  color: var(--text-strong);
+  background: var(--surface-2);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 122, 204, 0.3);
+  box-shadow: 0 4px 8px rgba(47, 111, 94, 0.2);
 }
 
 .style-btn.active {
-  background: #007acc;
-  border-color: #007acc;
-  color: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 122, 204, 0.5);
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--surface);
+  box-shadow: 0 4px 12px rgba(47, 111, 94, 0.3);
 }
 
 .citation-preview-card {
-  background: #252526;
-  border: 1px solid #3e3e42;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 10px;
   padding: 24px;
   position: relative;
@@ -404,15 +404,15 @@
 }
 
 .citation-preview-card:hover {
-  border-color: #007acc;
-  box-shadow: 0 6px 16px rgba(0, 122, 204, 0.2);
+  border-color: var(--accent);
+  box-shadow: 0 6px 16px rgba(47, 111, 94, 0.2);
 }
 
 .citation-label {
   display: inline-block;
   padding: 8px 16px;
-  background: #007acc;
-  color: #ffffff;
+  background: var(--accent);
+  color: var(--surface);
   border-radius: 6px;
   font-size: 12px;
   font-weight: 700;
@@ -422,8 +422,8 @@
 }
 
 .citation-text {
-  background: #1e1e1e;
-  border: 1px solid #3e3e42;
+  background: var(--bg);
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 20px;
   margin-bottom: 16px;
@@ -432,11 +432,11 @@
   font-family: 'Consolas', 'Monaco', monospace;
   font-size: 13px;
   line-height: 1.9;
-  color: #cccccc;
+  color: var(--text);
   min-height: 100px;
   max-height: 300px;
   overflow-y: auto;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 2px 4px rgba(30, 27, 21, 0.08);
 }
 
 .citation-text::-webkit-scrollbar {
@@ -444,17 +444,17 @@
 }
 
 .citation-text::-webkit-scrollbar-track {
-  background: #1e1e1e;
+  background: var(--bg);
   border-radius: 4px;
 }
 
 .citation-text::-webkit-scrollbar-thumb {
-  background: #3e3e42;
+  background: var(--border);
   border-radius: 4px;
 }
 
 .citation-text::-webkit-scrollbar-thumb:hover {
-  background: #4e4e52;
+  background: var(--border-strong);
 }
 
 .copy-citation-btn {
@@ -463,28 +463,28 @@
   justify-content: center;
   gap: 10px;
   padding: 12px 28px;
-  background: #007acc;
-  color: #ffffff;
-  border: 1px solid #007acc;
+  background: var(--accent);
+  color: var(--surface);
+  border: 1px solid var(--accent);
   border-radius: 6px;
   cursor: pointer;
   font-weight: 700;
   font-size: 14px;
   transition: all 0.2s;
   width: 100%;
-  box-shadow: 0 4px 12px rgba(0, 122, 204, 0.4);
+  box-shadow: 0 4px 12px rgba(47, 111, 94, 0.3);
 }
 
 .copy-citation-btn:hover {
-  background: #1177bb;
-  border-color: #1177bb;
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 122, 204, 0.5);
+  box-shadow: 0 6px 20px rgba(47, 111, 94, 0.35);
 }
 
 .copy-citation-btn:active {
   transform: translateY(0);
-  box-shadow: 0 2px 8px rgba(0, 122, 204, 0.4);
+  box-shadow: 0 2px 8px rgba(47, 111, 94, 0.25);
 }
 
 /* Scrollbar Styling */
@@ -493,16 +493,16 @@
 }
 
 .pdf-metadata-viewer::-webkit-scrollbar-track {
-  background: #f8f9fa;
+  background: var(--surface);
 }
 
 .pdf-metadata-viewer::-webkit-scrollbar-thumb {
-  background: #d0d0d0;
+  background: var(--border);
   border-radius: 5px;
 }
 
 .pdf-metadata-viewer::-webkit-scrollbar-thumb:hover {
-  background: #b0b0b0;
+  background: var(--border-strong);
 }
 
 /* Responsive Design */

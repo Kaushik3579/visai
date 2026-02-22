@@ -2,8 +2,8 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  background: #1e1e1e;
-  color: #cccccc;
+  background: var(--bg);
+  color: var(--text);
 }
 
 .extensions-header {
@@ -18,7 +18,7 @@
   margin: 0;
   font-size: 14px;
   font-weight: 600;
-  color: #cccccc;
+  color: var(--text);
 }
 
 .extensions-content {
@@ -51,7 +51,7 @@
   align-items: flex-start;
   gap: 12px;
   padding: 12px;
-  background: #252526;
+  background: var(--surface);
   border: 1px solid #2d2d2d;
   border-radius: 6px;
   transition: all 0.2s ease;
@@ -59,7 +59,7 @@
 
 .extension-item:hover {
   border-color: #3794ff;
-  background: #2a2d2e;
+  background: var(--surface-2);
 }
 
 .extension-icon {
@@ -85,7 +85,7 @@
   gap: 8px;
   font-size: 14px;
   font-weight: 500;
-  color: #cccccc;
+  color: var(--text);
   margin-bottom: 4px;
 }
 
@@ -116,7 +116,7 @@
   background: #2d2d2d;
   border: 1px solid #3d3d3d;
   border-radius: 4px;
-  color: #cccccc;
+  color: var(--text);
   cursor: pointer;
   font-size: 12px;
   display: flex;
@@ -133,13 +133,13 @@
 }
 
 .extension-toggle.enabled {
-  background: #0e639c;
-  border-color: #1177bb;
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
   color: white;
 }
 
 .extension-toggle.enabled:hover {
-  background: #1177bb;
+  background: var(--accent-strong);
   border-color: #1580c5;
 }
 
@@ -150,13 +150,13 @@
 }
 
 .extension-install {
-  background: #0e639c;
-  border-color: #1177bb;
+  background: var(--accent-strong);
+  border-color: var(--accent-strong);
   color: white;
 }
 
 .extension-install:hover {
-  background: #1177bb;
+  background: var(--accent-strong);
   border-color: #1580c5;
 }
 
@@ -169,7 +169,7 @@
 
 .extension-uninstall:hover {
   background: #3d3d3d;
-  color: #f48771;
+  color: var(--warning);
 }
 
 .extensions-info {
@@ -177,7 +177,7 @@
   align-items: flex-start;
   gap: 10px;
   padding: 12px;
-  background: #252526;
+  background: var(--surface);
   border: 1px solid #2d2d2d;
   border-radius: 6px;
   color: #888888;
@@ -202,7 +202,7 @@
 }
 
 .extensions-content::-webkit-scrollbar-track {
-  background: #1e1e1e;
+  background: var(--bg);
 }
 
 .extensions-content::-webkit-scrollbar-thumb {
